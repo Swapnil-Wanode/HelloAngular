@@ -1,0 +1,52 @@
+<div class="panel panel-primery">
+    <h4>Order List</h4>
+    <table border="1" class="table table-hover">
+        <tr >
+            <td> Booking OrderId</td>
+            <td> Order Date </td>
+            <td> Transaction Mode </td>
+            <td> Quantity </td>
+            <td> Total Cost </td>
+            
+        </tr>
+        <tr *ngFor="let o of orders">
+            <td> {{o.bookingOrderId}} </td>
+            <td> {{o.orderDate}} </td>
+            <td> {{o.transactionMode}}</td>
+            <td> {{o.quantity}} </td>
+            <td> {{o.totalCost}} </td>
+            
+        
+        </tr>
+    </table>
+</div>
+<div class="container">
+<form clas="form-group">
+    Booking OrderId: <input type="text" placeholder="enter order id" width="20" name="order.bookingOrderId" [(ngModel)]="order.bookingOrderId" class="form-control" /><br>                       
+
+    Order Date: <input type="date" placeholder="enter order date" width="20" name="order.orderDate" [(ngModel)]="order.orderDate" class="form-control" /><br>
+
+    Transaction Mode: <input type="text" placeholder="enter transaction mode" width="20" name="order.transactionMode" [(ngModel)]="order.transactionMode" class="form-control" /><br>
+
+    Quantity: <input type="text" placeholder="enter quantity" width="20" name="order.quantity" [(ngModel)]="order.quantity" class="form-control" /><br>
+
+    Total Cost: <input type="text" placeholder="total cost" width="20" name="order.totalCost" [(ngModel)]="order.totalCost" class="form-control" /><br>
+
+    <!-- Planters: <input type="text" placeholder="enter planters" width="20" name="order.planters" [(ngModel)]="order.planters" class="form-control" /><br>
+
+    Plants:<input type="text" placeholder="enter plants" width="20" name="order.plants" [(ngModel)]="order.plants" class="form-control" /><br>
+
+    Seeds:<input type="text" width="20" placeholder="enter seeds" name="order.seeds" [(ngModel)]="order.seeds" class="form-control" /><br>
+
+    Customer: <input type="text" width="20" placeholder="enter name of customer" name="order.customer" [(ngModel)]="order.customer" class="form-control" /><br> -->
+
+
+        <button (click)="addOrder()" class="btn btn-success">Add Order</button> &nbsp;
+        <button (click)="updateOrder()" class="btn btn-success">Update Order</button> &nbsp;
+        <button (click)="deleteOrder()" class="btn btn-danger">Delete Order</button> &nbsp;    
+        <button (click)="viewOrderById()" class="btn btn-success">View Order By Id</button>&nbsp;
+        <button (click)="viewallorder()" class="btn btn-success">Get Order list </button> 
+        
+</form>
+</div>
+

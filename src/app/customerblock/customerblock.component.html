@@ -1,0 +1,40 @@
+<h3>customer Section</h3>
+<div class="panel panel-primary">
+    <h4>Customer List</h4>
+   
+        <table border="1" class="table table-hover">
+
+            <tr>
+            <td> CustomerId</td>
+            <td> CustomerName</td>
+            <td> CustomerEmail</td>
+            <td> UserName</td>
+            <td> Password</td>
+        </tr>
+        <tr *ngFor="let c of customers">
+            <td>{{c.customerId}}</td>
+            <td>{{c.customerName}}</td>
+            <td>{{c.customerEmail}}</td>
+            <td>{{c.username}}</td>
+            <td>{{c.password}}</td>
+
+        </tr>
+        </table>
+        </div>
+        <div class="container">
+            <form class="form-group">
+                Customer Id: <input type="text" placeholder="enter customer id " width="20" name="customer.customerId" [(ngModel)]="customer.customerId" class="form-control" /><br>
+                Customer Name: <input type="text" placeholder="enter customer name " width="20" name="customer.customerName" [(ngModel)]="customer.customerName" class="form-control" /><br>
+                Customer Email: <input type="text" placeholder="enter customer email " width="20" name="customer.customerEmail" [(ngModel)]="customer.customerEmail" class="form-control" /><br>
+                UserName: <input type="text" placeholder="enter username" width="20" name="customer.username" [(ngModel)]="customer.username" class="form-control" /><br>
+                Password: <input type="text" placeholder="enter password " width="20" name="customer.password" [(ngModel)]="customer.password" class="form-control" /><br>
+               
+                <button (click)="addCustomer()" class="btn btn-success">Add Customer</button>
+                <button (click)="updateCustomer()" class="btn btn-success">Update Customer</button>
+                <button (click)="deleteCustomer()" class="btn btn-danger">Delete Customer</button>
+                <button (click)="viewById()" class="btn btn-success">View Customer By Id</button>
+                <button (click)="viewallCustomer()" class="btn btn-success">View all Customer</button>
+        
+            </form>
+        </div>
+        

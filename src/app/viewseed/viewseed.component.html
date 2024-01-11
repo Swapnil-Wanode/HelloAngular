@@ -1,0 +1,93 @@
+
+ <div  class="panel panel-primery">
+    <h3> List of Seeds</h3>
+    <table border="1" class="table table-hover">
+        <tr>
+            <td> SeedId </td>
+            <td> CommonName </td>
+            <td> BloomTime </td>
+            <td> Watering </td>
+            <td> DifficultyLevel </td>
+            <td> Temperature </td>
+            <td> TypeOfSeeds </td>
+            <td> Description </td>
+            <td> Stock </td>
+            <td> Cost </td>
+            <td> SeedsPerPacket</td>              
+        </tr>
+        <tr *ngFor="let s of seeds">
+            <td> {{s.seedId}} </td>
+            <td> {{s.commonName}} </td>
+            <td> {{s.bloomTime}} </td>
+            <td> {{s.watering}} </td>
+            <td> {{s.difficultyLevel}} </td>
+            <td> {{s.temperature}} </td>
+            <td> {{s.typeOfSeeds}} </td>
+            <td> {{s.seedsDescription}} </td>
+            <td> {{s.seedsStock}} </td>
+            <td> {{s.seedsCost}} </td>
+            <td> {{s.seedsPerPacket}} </td>              
+        </tr>
+    </table>
+</div>
+
+
+
+<div  class="container">
+    <form clas="form-group">
+       Seed Id: <input type="text" width="20" name="seed.seedId" [(ngModel)]="seed.seedId" class="form-control" /><br>                         
+       Common Name: <input type="text" width="20" name="seed.commonName" [(ngModel)]="seed.commonName" class="form-control"/><br>
+       Bloom Time: <input type="text" width="20" name="seed.bloomTime" [(ngModel)]="seed.bloomTime" class="form-control"/><br>
+       Watering: <input type="text" width="20" name="seed.watering" [(ngModel)]="seed.watering" class="form-control"/><br>
+       DifficultyLevel:<input type="text" width="20" name="seed.difficultyLevel" [(ngModel)]="seed.difficultyLevel" class="form-control"/><br>
+       Temperature:<input type="text" width="20" name="seed.temperature" [(ngModel)]="seed.temperature" class="form-control"/><br>
+       Type Of Seeds: <input type="text" width="20" name="seed.typeOfSeeds" [(ngModel)]="seed.typeOfSeeds" class="form-control"/><br>
+       Description: <input type="text" width="20" name="seed.seedsDescription" [(ngModel)]="seed.seedsDescription" class="form-control"/><br>    
+       Stock:<input type="text" width="20" name="seed.seedsStock" [(ngModel)]="seed.seedsStock" class="form-control"/><br>    
+       Cost: <input type="text" width="20" name="seed.seedsCost" [(ngModel)]="seed.seedsCost" class="form-control"/><br>
+       SeedsPerPacket: <input type="text" width="20" name="seed.seedsPerPacket" [(ngModel)]="seed.seedsPerPacket" class="form-control"/><br>
+    
+       
+       <button (click)="viewById()" class="btn btn-success">View Seed By Id</button> &nbsp;
+       <button (click)="viewallseed()" class="btn btn-info">View all Seed </button> &nbsp;
+       <button (click)="viewByName()" class="btn btn-success">View Seed By name</button> &nbsp;
+       <button (click)="viewByType()" class="btn btn-success">View Seed By type</button> 
+    
+    </form>
+    </div>  
+
+
+
+
+    
+    <h4> Get Seed by Type :</h4> <p>click on "view by type" Button </p>
+    <div  class="panel panel-primery">
+        <table border="1" class="table table-hover">
+            <tr>
+                <td> SeedId </td>
+                <td> CommonName </td>
+                <td> BloomTime </td>
+                <td> Watering </td>
+                <td> DifficultyLevel </td>
+                <td> Temperature </td>
+                <td> TypeOfSeeds </td>
+                <td> Description </td>
+                <td> Stock </td>
+                <td> Cost </td>
+                <td> SeedsPerPacket</td>              
+            </tr>
+            <tr *ngFor="let s of list">
+                <td> {{s.seedId}} </td>
+                <td> {{s.commonName}} </td>
+                <td> {{s.bloomTime}} </td>
+                <td> {{s.watering}} </td>
+                <td> {{s.difficultyLevel}} </td>
+                <td> {{s.temperature}} </td>
+                <td> {{s.typeOfSeeds}} </td>
+                <td> {{s.seedsDescription}} </td>
+                <td> {{s.seedsStock}} </td>
+                <td> {{s.seedsCost}} </td>
+                <td> {{s.seedsPerPacket}} </td>              
+            </tr>
+        </table>
+    </div>

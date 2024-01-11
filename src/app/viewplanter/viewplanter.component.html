@@ -1,0 +1,49 @@
+
+<div class="panel panel-primery">
+    <h4>Planter List</h4>
+    <table border="1" class="table table-hover">
+        <tr >
+            <td> PlanterId</td>
+            <td> PlanterHeight </td>
+            <td> PanterCapacity </td>
+            <td> DrainageHoles </td>
+            <td> PlanterColour </td>
+            <td> PlanterShape </td>
+            <td> PlantersStock </td>
+            <td> PlanterCost </td>
+        </tr>
+        <tr *ngFor="let p of planters">
+            <td> {{p.planterId}} </td>
+            <td> {{p.planterHeight}} </td>
+            <td> {{p.planterCapacity}} </td>
+            <td> {{p.planterColour}} </td>
+            <td> {{p.drainageHoles}} </td>
+            <td> {{p.planterShape}} </td>
+            <td> {{p.planterStock}} </td>
+            <td> {{p.planterCost}} </td>
+        </tr>
+    </table>
+</div>
+<div class="container">
+<form clas="form-group">
+    PlanterId: <input type="text" placeholder="enter planter id" width="20" name="planter.planterId" [(ngModel)]="planter.planterId" class="form-control" /><br>                       
+
+   Planter Height: <input type="text" placeholder="enter planter height" width="20" name="planter.planterHeight" [(ngModel)]="planter.planterHeight" class="form-control" /><br>
+
+   Planter Capacity: <input type="text" placeholder="enter planter capcity" width="20" name="planter.planterCapacity" [(ngModel)]="planter.planterCapacity" class="form-control" /><br>
+
+   Drainage Holes: <input type="text" placeholder="enter drainage holes" width="20" name="planter.drainageHoles" [(ngModel)]="planter.drainageHoles" class="form-control" /><br>
+
+   Planter Colour: <input type="text" placeholder="enter planter colour" width="20" name="planter.planterColour" [(ngModel)]="planter.planterColour" class="form-control" /><br>
+
+   Planter Shape: <input type="text" placeholder="enter planter shape" width="20" name="planter.planterShape" [(ngModel)]="planter.planterShape" class="form-control" /><br>
+
+   Planter Stock:<input type="text" width="20" placeholder="enter planters stock" name="planter.planterStock" [(ngModel)]="planter.planterStock" class="form-control" /><br> 
+
+   Planter Cost: <input type="text" width="20" placeholder="enter cost of planter" name="planter.planterCost" [(ngModel)]="planter.planterCost" class="form-control" /><br>
+      
+        <button (click)="getPlanterById()" class="btn btn-success">View planter by Id</button> &nbsp;
+        <button (click)="getAllPlanters()" class="btn btn-success">View all Planters </button> &nbsp;
+        <!-- <button (click)="getAllPlantersInRange()" class="btn btn-success">View Planters in range</button> -->
+</form>
+</div>

@@ -1,0 +1,250 @@
+
+<!-- 2. Hands-on starts -->
+
+<!-- <div style="text-align:center">
+<button class="btn btn-info" (click)="sortbyid()">Sort By Id</button>
+<button class="btn btn-success" (click)="sortbyname()">Sort By Name</button>
+<button class="btn btn-info" (click)="sortbyage()">Sort By Age</button>
+</div><br>
+
+<div class="jumbotron" style="text-align:center">
+  <table border="1" style="margin: auto;">
+   <tr *ngFor="let p of persons | sort:flag">
+     <div *ngIf="p.pid"> -->
+     <!-- <td> {{p.pid}} </td>
+     <td> {{p.pname}} </td>
+     <td> {{p.page}} </td>
+     <td><button class="btn btn-info" (click)="select(p)">Select</button></td>
+     <td><button class="btn btn-success" (click)="editRecord(p)" >Edit</button></td>
+     <td><button class="btn btn-danger" (click)="delRecord(p.pid)" >Delete</button></td> -->
+   <!-- </div> -->
+   <!-- </tr>
+ </table>
+ </div>
+ 
+ <br>
+ <br>
+ 
+   <div style="text-align:center">
+     Person id :<input type="text" width="20" [(ngModel)]="person.pid"/><br>
+     Person name:<input type="text" width="20" [(ngModel)]="person.pname"/><br>
+     Person Age:<input type="text" width="20" [(ngModel)]="person.page"/><br>
+   </div>
+ 
+   <div class="jumbotron" style="text-align:center">
+     <button width=20 class="btn btn-primary" (click)="addRecord()"> Add </button>
+   </div> -->
+   <!-- <div class="jumbotron" style="text-align:center">
+     <button width=20 class="btn btn-primary" (click)="editRecord()"> Edit </button>
+   </div> -->
+
+
+<!-- 2.Hands-on completed -->
+
+
+ <!-- 1.Hands-on starts
+
+<button (click)="p1()"> Show Number</button>
+<button (click)="p2()"> Show String </button>
+<button (click)="p3()"> Show Object </button>
+<button (click)="p4()"> Show Array </button>
+<button (click)="p5()"> Show Delated Data </button>
+
+<h1> Result : </h1>
+<div *ngIf="check">
+    <h4 *ngIf="n"> {{num}} </h4>
+    <h4 *ngIf="nm"> {{name}} </h4>
+    <h4 *ngIf="arr">
+        <ol>
+          <li *ngFor="let a of array">
+            {{a}}
+          </li>
+        </ol> </h4>
+    <h4 *ngIf="obj"> Person's details :-<br>
+          {{person.pid}},
+          {{person.pname}},
+          {{person.page}}
+   </h4>
+    <h4 *ngIf="per"> 
+      <table border="1">
+        <tr *ngFor="let p of persons">
+          <td> {{p.pid}} </td>
+          <td> {{p.pname}} </td>
+          <td> {{p.page}} </td>
+        </tr>
+      </table>
+    </h4>
+</div>
+
+1.Hands-on completed  -->
+
+<!-- 
+<h1>  {{name}} </h1>
+<h1> {{n}} </h1>
+
+<h4>Person's details :-<br>
+  {{person.pid}},
+  {{person.pname}},
+  {{person.page}}
+</h4>
+
+<h1>Array element :  {{array[1]}} </h1>
+
+<ol>
+  <li *ngFor="let a of array">
+    {{a}}
+  </li>
+</ol>
+
+<ol>
+  <li *ngFor="let c of cities">
+    {{c}}
+  </li>
+</ol>
+
+<div> <h1 *ngIf="n==100">  value of n is {{n}}    </h1> </div>
+<div> <h1 *ngIf="flag==true"> Flag value is true</h1> </div>
+<div *ngIf="n!=10"> value of n is not 10 </div>
+
+<table border="1">
+  <tr *ngFor="let p of persons">
+    <td> {{p.pid}} </td>
+    <td> {{p.pname}} </td>
+    <td> {{p.page}} </td>
+  </tr>
+</table>
+
+<br>
+
+<table border="1">
+  <tr *ngFor="let p of persons">
+    <div *ngIf="p.pid==101">
+    <td> {{p.pid}} </td>
+    <td> {{p.pname}} </td>
+    <td> {{p.page}} </td>
+  </div>
+  </tr>
+</table>
+
+<ol>
+  <li *ngFor="let p of person1">
+    {{p.pid}},{{p.pname}},{{p.page}}
+  </li>
+</ol>
+
+<button (click)="f1()"> click here </button>
+
+<h1> {{uname}} </h1><br>
+
+<input type="text" width="20" [(ngModel)]="uname"/>
+
+ -->
+
+ <!-- Day-1 --- pre-defined pipe character -->
+ <!-- <h1> pipe character : </h1>
+ <h1> {{name | lowercase}} </h1>
+ <h1> {{name | uppercase}} </h1>
+ <h1> {{name | titlecase}} </h1>
+ <h1> {{num | currency}} </h1>
+ <h1> {{num | currency:'INR'}} </h1>
+ <h1> {{num | currency:'GBP'}} </h1>
+ <h1> {{num | percent}} </h1>
+ <h1> {{person | json}} </h1>
+ <h1> {{d | date}} </h1>
+ <h1> {{d | date:'dd:mm:yy'}} </h1>
+ <h1> {{d | date:'short'}} </h1>
+ <h1> {{d | date:'medium'}} </h1>
+ <h1> {{d | date:'full'}} </h1> -->
+
+ <!-- user defined pipe character -->
+ <!-- <h1> {{var1 | power:2 }} </h1> -->
+
+ <!-- <h3> {{myperson.pid}},{{myperson.pname}},{{myperson.page}} </h3> -->
+
+<!--   
+ <div class="jumbotron" style="text-align:center">
+ <table border="1" style="margin: auto;">
+  <tr *ngFor="let p of persons">
+    <div *ngIf="p.pid">
+    <td> {{p.pid}} </td>
+    <td> {{p.pname}} </td>
+    <td> {{p.page}} </td>
+    <td><button class="btn btn-info" (click)="select(p)">Select</button></td>
+    <td><button class="btn btn-success" (click)="editRecord(p)" >Edit</button></td>
+    <td><button class="btn btn-danger" (click)="delRecord(p.pid)" >Delete</button></td>
+  </div> -->
+  <!-- </tr>
+</table>
+</div>
+
+<br>
+<br>
+
+  <div style="text-align:center">
+    Person id :<input type="text" width="20" [(ngModel)]="person.pid"/><br>
+    Person name:<input type="text" width="20" [(ngModel)]="person.pname"/><br>
+    Person Age:<input type="text" width="20" [(ngModel)]="person.page"/><br>
+  </div>
+
+  <div class="jumbotron" style="text-align:center">
+    <button width=20 class="btn btn-primary" (click)="addRecord()"> Add </button>
+  </div>
+  <div class="jumbotron" style="text-align:center">
+    <button width=20 class="btn btn-primary" (click)="editRecord()"> Add </button>
+  </div>  -->
+
+<!-- <app-first> </app-first> 
+<app-second></app-second> -->
+
+<!-- <div class="jumbotron" style="border: 2px solid black;"> my name is swapnlil wanode <div> -->
+
+<!-- <a [routerLink]="['/first']">First componemt</a>
+<a [routerLink]="['/second']">Second componemt</a>
+<h3> This is my home page</h3>
+<router-outlet>
+
+</router-outlet> 
+ -->
+
+<!-- 
+<header> 
+   <div id="title"><h1>Online Nursery Application </h1></div>
+</header> -->
+
+ 
+<!-- 
+<div id="button">
+<button width="20" (click)="signin()" class="btn btn-primary">SignIn</button> &nbsp;&nbsp;
+<button width="20" (click)="signup()" class="btn btn-primary">SignUp</button>
+
+  <div *ngIf="check1">
+    <app-signin> </app-signin> 
+  </div>
+  <div *ngIf="check2">
+    <app-signup></app-signup>
+  </div>
+  <br><br>
+ <img src="background.jpg"> 
+  <router-outlet> 
+
+  </router-outlet> 
+
+  
+</div> -->
+<!--
+<div id="link">
+  <a [routerLink]="['/plant']">Plant Section</a>
+  
+</div> 
+-->
+
+<!-- <a [routerLink]="['/planter']">Planter Section</a> -->
+  
+<a [routerLink]="['/signin']"></a>
+<!-- <a [routerLink]="['/order']">order page</a>  -->
+<router-outlet>
+  
+</router-outlet> 
+
+
+

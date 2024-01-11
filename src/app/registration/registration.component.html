@@ -1,0 +1,14 @@
+<h4> Please fill Customer Details:</h4>
+<div class="container">
+    <form class="form-group">
+        Customer Id: <input type="text" placeholder="enter customer id " width="20" name="customer.customerId" [(ngModel)]="customer.customerId" class="form-control" /><br>
+        Customer Name: <input type="text" placeholder="enter customer name " width="20" name="customer.customerName" [(ngModel)]="customer.customerName" class="form-control" /><br>
+        Customer Email: <input type="text" placeholder="enter customer email " width="20" name="customer.customerEmail" [(ngModel)]="customer.customerEmail" class="form-control" /><br>
+        UserName: <input type="text" placeholder="enter username" width="20" name="customer.username" [(ngModel)]="customer.username" class="form-control" /><br>
+        Password: <input type="text" placeholder="enter password " width="20" name="customer.password" [(ngModel)]="customer.password" class="form-control" /><br>
+       
+        <button (click)="addCustomer()" class="btn btn-success">Register</button>
+    </form>
+</div>
+
+ 

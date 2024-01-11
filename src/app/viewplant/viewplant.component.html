@@ -1,0 +1,102 @@
+
+<div class="panel panel-primery">
+    <h4>Plant List</h4>
+    <table border="1" class="table table-hover">
+        <tr >
+            <td> PlantId</td> 
+            <td> PlantHeight </td>
+            <td> PantSpread </td>
+            <td> CommonName </td>
+            <td> BloomTime </td>
+            <td> MedicinalOrCulinaryUse </td>
+            <td> DifficultyLevel </td>
+            <td> Temparature </td>
+            <td> TypeOfPlant </td>
+            <td> PlantDescription </td>
+            <td> PlantsStock </td>
+            <td> PlantCost </td>
+        </tr>
+        <tr *ngFor="let p of plants">
+            <td> {{p.plantId}} </td>
+            <td> {{p.plantHeight}} </td>
+            <td> {{p.plantSpread}} </td>
+            <td> {{p.commonName}} </td>
+            <td> {{p.bloomTime}} </td>
+            <td> {{p.medicinalOrCulinaryUse}} </td>
+            <td> {{p.difficultyLevel}} </td>
+            <td> {{p.temparature}} </td>
+            <td> {{p.typeOfPlant}} </td>
+            <td> {{p.plantDescription}} </td>
+            <td> {{p.plantsStock}} </td>
+            <td> {{p.plantCost}} </td>
+        </tr>
+    </table>
+</div>
+<div class="container">
+<form clas="form-group">
+    PlantId: <input type="text" placeholder="enter plant id" width="20" name="plant.plantId" [(ngModel)]="plant.plantId" class="form-control" /><br>                       
+
+   Plant Height: <input type="text" placeholder="enter plant height" width="20" name="plant.plantHeight" [(ngModel)]="plant.plantHeight" class="form-control" /><br>
+
+   Plant Spread: <input type="text" placeholder="enter plant spread" width="20" name="plant.plantSpread" [(ngModel)]="plant.plantSpread" class="form-control" /><br>
+
+   Common Name: <input type="text" placeholder="enter common name" width="20" name="plant.commonName" [(ngModel)]="plant.commonName" class="form-control" /><br>
+
+   Bloom Time: <input type="text" placeholder="enter bloom time" width="20" name="plant.bloomTime" [(ngModel)]="plant.bloomTime" class="form-control" /><br>
+
+   Medicinal Or CulinaryUse: <input type="text" placeholder="enter use of plant" width="20" name="plant.medicinalOrCulinaryUse" [(ngModel)]="plant.medicinalOrCulinaryUse" class="form-control" /><br>
+
+   Difficulty Level:<input type="text" placeholder="difficulty level" width="20" name="plant.difficultyLevel" [(ngModel)]="plant.difficultyLevel" class="form-control" /><br>
+
+   Temparature:<input type="text" width="20" placeholder="enter temperature" name="plant.temparature" [(ngModel)]="plant.temparature" class="form-control" /><br>
+
+   Type Of Plant: <input type="text" width="20" placeholder="enter type of plant" name="plant.typeOfPlant" [(ngModel)]="plant.typeOfPlant" class="form-control" /><br>
+
+   PlantDescription: <input type="text" width="20" placeholder="enter plant description" name="plant.plantDescription" [(ngModel)]="plant.plantDescription" class="form-control" /><br>
+
+   Plants Stock:<input type="text" width="20" placeholder="enter plants stock" name="plant.plantsStock" [(ngModel)]="plant.plantsStock" class="form-control" /><br> 
+
+   Plant Cost: <input type="text" width="20" placeholder="enter cost of plant" name="plant.plantCost" [(ngModel)]="plant.plantCost" class="form-control" /><br>
+
+        <button (click)="viewByName()" class="btn btn-success">View Plant By name</button> &nbsp;
+        <button (click)="viewByType()" class="btn btn-success">View Plant By type</button> &nbsp;
+        <button (click)="viewallplant()" class="btn btn-success">View all Plant </button> &nbsp;
+        <button (click)="viewById()" class="btn btn-success">View Plant By Id</button>
+</form>
+</div>
+
+
+<div>
+    <h3>View all plant by type :</h3><p>click on "view Plant by type" Button</p>
+    <table border="1">
+        <tr >
+            <td> PlantId</td>
+            <td> PlantHeight </td>
+            <td> PantSpread </td>
+            <td> CommonName </td>
+            <td> BloomTime </td>
+            <td> MedicinalOrCulinaryUse </td>
+            <td> DifficultyLevel </td>
+            <td> Temparature </td>
+            <td> TypeOfPlant </td>
+            <td> PlantDescription </td>
+            <td> PlantsStock </td>
+            <td> PlantCost </td>
+        </tr>
+    <tr *ngFor="let p of list">
+        <td> {{p.plantId}} </td>
+        <td> {{p.plantHeight}} </td>
+        <td> {{p.plantSpread}} </td>
+        <td> {{p.commonName}} </td>
+        <td> {{p.bloomTime}} </td>
+        <td> {{p.medicinalOrCulinaryUse}} </td>
+        <td> {{p.difficultyLevel}} </td>
+        <td> {{p.temparature}} </td>
+        <td> {{p.typeOfPlant}} </td>
+        <td> {{p.plantDescription}} </td>
+        <td> {{p.plantsStock}} </td>
+        <td> {{p.plantCost}} </td>
+    </tr>
+</table>
+</div> 
+
